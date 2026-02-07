@@ -180,7 +180,7 @@ def add_book_tags_file(catalog, booktagsfile):
 
 
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    pass
+pass
 
 
 def create_book_tag_list(catalog):
