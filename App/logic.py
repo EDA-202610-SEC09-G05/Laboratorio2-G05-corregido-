@@ -95,6 +95,7 @@ def load_books(catalog, filename):
     books_file = os.path.join(data_dir, filename)
     catalog["books"] = set.load_set(books, books_file)
     return book_size(catalog)
+    
 
 
 def load_tags(catalog, filename):
@@ -133,7 +134,7 @@ def load_books_tags(catalog, filename):
     :rtype: int
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    pass
+    
 
 
 def first_book(catalog):
@@ -167,7 +168,8 @@ def add_book_tags_file(catalog, booktagsfile):
     :rtype: dict
     """
     # TODO: Mods de Est-1, Est-2 y Est-3 en el Lab 2
-    pass
+    set.add_element(catalog["book_tags"], booktag)
+    return catalog
 
 
 def create_book_tag_list(catalog):
@@ -198,14 +200,14 @@ def add_book_tag(catalog, booktag):
 
 def book_size(catalog):
     # TODO: Mods de Est-3 en el Lab 2
-    pass
+    return set.size(catalog["books"])
 
 
 def tag_size(catalog):
     # TODO: Mods de Est-3 en el Lab 2
-    pass
+    return set.size(catalog["tags"])
 
 
 def book_tag_size(catalog):
     # TODO: Mods de Est-3 en el Lab 2
-    pass
+    return set.size(catalog["book_tags"])
